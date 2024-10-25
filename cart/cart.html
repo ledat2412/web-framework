@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css"> 
+    <link rel="stylesheet" href="/font/font1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cart-container">
+        <div class="cart-left">
+            <!-- <h2>SẢN PHẨM</h2> -->
+            <div class="form-price">
+                <h1 class="product-title"> sản phẩm </h1>
+                <div class="item-price">
+                    <p class="price-title"> giá </p>
+                    <p class="quantity-title"> số lượng </p>
+                    <p class="subtotal-title"> tạm tính </p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="cart-item">
+                <img src="/img/logo_compact.png" alt="product image">
+                <a href="#">sản phẩm 1</a>
+                <div class="item-price">
+                    <p class="price-title">1.900.000 ₫</p>
+                    <input class="quantity-title" type="number" value="1" min="1" id="quantity" onchange="updateCart()">
+                    <p class="subtotal-title" id="item-subtotal">1.900.000 ₫</p>
+                </div>
+            </div>
+            <button class="continue-shopping">← Tiếp tục xem sản phẩm</button>
+        </div>
+        
+        <div class="cart-right">
+            <h2>CỘNG GIỎ HÀNG</h2>
+            <div class="line"></div>
+            <div class="cart-summary">
+                <p>Tạm tính</p>
+                <p id="cart-subtotal">1.900.000 ₫</p>
+            </div>
+            <h3>Giao hàng</h3>
+            <div class="shipping-options">
+                <input type="radio" id="standard" name="shipping" value="40000" checked onclick="updateCart()">
+                <label for="standard">Chuyển phát thường mại điện tử (GHN, Viettel Post, GHTK,...): 40.000 ₫</label><br>
+                <input type="radio" id="express" name="shipping" value="65000" onclick="updateCart()">
+                <label for="express">Hỏa tốc: 65.000 ₫</label><br>
+            </div>
+            <p>Vận chuyển đến Hồ Chí Minh </p>
+            <button class="change-address">Đổi địa chỉ</button>
+            <div class="line"></div>
+            <div class="total">
+                <p>Tổng</p>
+                <p id="cart-total">1.940.000 ₫</p>
+            </div>
+            <div class="discount-code">
+                <h4>Mã ưu đãi</h4>
+                <input type="text" placeholder="Nhập mã ưu đãi">
+                <button>Áp dụng</button>
+            </div>
+            <div class="line"></div>
+            <button class="checkout">đặt hàng</button>
+        </div>
+    </div>
+</body>
+<script src="cart.js"></script>
+</html>

@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.header {
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+    box-shadow: none;
+    padding:  10.45px;
+    display: absolute;
+    position: absolute;
+    align-items: center;
+    background: rgba(76, 175, 80, 0.8);
+
+}
+
+.banner {
+    z-index: 0;
+    cursor: none;
+    height: 300px; /* Chiều cao của banner */
+    display: flex;
+    color: white;
+    font-size: 24px;
+    margin-top: 100px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff9800; /* Màu nền của banner */
+}
+
+.headermove {
+    left: 0; /* Đặt header nằm ở bên trái */
+    right: 0; /* Đặt header nằm ở bên phải */
+    z-index: 2;
+    top: -100px; /* Đặt header nằm bên ngoài viewport ban đầu */
+    padding: 1px; /* Khoảng cách trong */
+    color: white; /* Màu chữ */
+    position: fixed; /* Giữ header trên banner */
+    box-shadow: none; /* Mặc định không có box shadow */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển tiếp */
+    background-color: rgba(76, 175, 80, 0.8); /* Màu nền của header với độ trong suốt */
+}
+
+.show-header {
+    top: 0; /* Đặt top về 0 để hiển thị header */
+}
+
+/* Hiệu ứng cho header khi cuộn qua banner */
+.headermove.box-shadow {
+    animation: slideDown 0.3s forwards; /* Thêm animation slideDown */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Tăng cường hiệu ứng shadow khi cuộn qua banner */
+}
+
+/* Animation khi header hiển thị */
+@keyframes slideDown {
+    from {
+        top: -100px; /* Bắt đầu từ trên cùng */
+    }
+    to {
+        top: 0; /* Đến vị trí ban đầu của header */
+    }
+}
+
+/*===========chuột cho hình tròn============*/
+
+.cursor-circle {
+    width: 30px; 
+    height: 30px; 
+    display: none; /* Ẩn hình tròn mặc định */
+    position: absolute;
+    border-radius: 50%; /* Hình tròn */
+    pointer-events: none; /* Không cho hình tròn nhận sự kiện chuột */
+    transform: translate(-50%, -50%); /* Để hình tròn ở giữa chuột */
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền hình tròn */
+    animation: normal 0.3s ease;
+}
+
+/* Hiệu ứng cho hình tròn khi chuột hover vào */
+.banner:hover .cursor-circle {
+     /* Màu nên hình tròn */
+    animation: normal 0.3s ease;
+
+}
+
+@keyframes normal {
+    from {
+        width: 0; /* Màu nên hình tròn */
+        height: 0;
+    }
+    to {
+        width: 30px; /* Màu nên hình tròn */
+        height: 30px;
+    }
+}
