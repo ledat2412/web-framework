@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header trên Banner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="text" id="search-box" placeholder="Tìm kiếm sản phẩm..." onkeyup="searchProduct()">
+    <div id="search-results"></div>    
+    
+
+
+    <p>Chọn sản phẩm (chỉ chọn một):</p>
+    <input type="checkbox" id="giay" name="product" value="giay" onclick="onlyOne(this)">
+    <label for="giay">Giày thể thao Li-Ning</label><br>
+    
+    <input type="checkbox" id="ao" name="product" value="ao" onclick="onlyOne(this)">
+    <label for="ao">Áo thun thể thao</label><br>
+    
+    <input type="checkbox" id="quan" name="product" value="quan" onclick="onlyOne(this)">
+    <label for="quan">Quần shorts tập gym</label><br>
+    
+    <input type="checkbox" id="aokhoac" name="product" value="aokhoac" onclick="onlyOne(this)">
+    <label for="aokhoac">Áo khoác gió</label><br>
+    
+    <input type="checkbox" id="balo" name="product" value="balo" onclick="onlyOne(this)">
+    <label for="balo">Balo thể thao</label><br>
+    
+    <input type="checkbox" id="tat" name="product" value="tat" onclick="onlyOne(this)">
+    <label for="tat">Tất thể thao Li-Ning</label><br>
+    
+
+
+    <p>Chọn sản phẩm (chỉ chọn một):</p>
+<input type="radio" id="giay" name="product" value="giay">
+<label for="giay">Giày thể thao Li-Ning</label><br>
+
+<input type="radio" id="ao" name="product" value="ao">
+<label for="ao">Áo thun thể thao</label><br>
+
+<input type="radio" id="quan" name="product" value="quan">
+<label for="quan">Quần shorts tập gym</label><br>
+
+<input type="radio" id="aokhoac" name="product" value="aokhoac">
+<label for="aokhoac">Áo khoác gió</label><br>
+
+<input type="radio" id="balo" name="product" value="balo">
+<label for="balo">Balo thể thao</label><br>
+
+<input type="radio" id="tat" name="product" value="tat">
+<label for="tat">Tất thể thao Li-Ning</label><br>
+
+</body>
+    <script src="script.js"></script> <!-- Kết nối tệp JavaScript -->
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+</head>
+<body>
+    <form action="">
+        <h1>Cart</h1>
+        <input type="text" class="search" list="food" id="fav-food" placeholder="Search your favorite item">
+    
+        <datalist id="food">
+            <option value="Giày thể thao Li-Ning"></option>
+            <option value="Áo thun thể thao"></option>
+            <option value="Quần shorts tập gym"></option>
+            <option value="Áo khoác gió"></option>
+            <option value="Balo thể thao"></option>
+            <option value="Tất thể thao Li-Ning"></option>
+        </datalist>
+    
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

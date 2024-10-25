@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Lọc Sản Phẩm</title>
+    <style>
+        /* Định dạng giao diện cho các phần bộ lọc và sản phẩm */
+        .filter-section {
+            margin-bottom: 20px;
+        }
+
+        .filter-title {
+            font-weight: bold;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-group label, .radio-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            display: none; /* Ẩn sản phẩm mặc định */
+        }
+    </style>
+</head>
+<body>
+    <!-- Bộ lọc loại giày -->
+    <div class="filter-section">
+        <div class="filter-title">Loại Giày</div>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="shoe-type" value="tat-ca" checked> Tất Cả Loại Giày</label>
+            <label><input type="checkbox" name="shoe-type" value="the-thao"> Giày Thể Thao</label>
+            <label><input type="checkbox" name="shoe-type" value="di-bo"> Giày Đi Bộ</label>
+            <label><input type="checkbox" name="shoe-type" value="cau-long"> Giày Cầu Lông</label>
+        </div>
+    </div>
+
+    <!-- Bộ lọc màu giày -->
+    <div class="filter-section">
+        <div class="filter-title">Màu Giày</div>
+        <div class="radio-group">
+            <label><input type="checkbox" name="shoe-color" value="do"> Đỏ</label>
+            <label><input type="checkbox" name="shoe-color" value="xanh"> Xanh</label>
+            <label><input type="checkbox" name="shoe-color" value="den"> Đen</label>
+            <label><input type="checkbox" name="shoe-color" value="trang"> Trắng</label>
+        </div>
+    </div>
+
+    <!-- Danh sách sản phẩm -->
+    <div id="product-list">
+        <div class="product" data-type="the-thao" data-color="do">Giày Thể Thao - Màu Đỏ</div>
+        <div class="product" data-type="the-thao" data-color="xanh">Giày Thể Thao - Màu Xanh</div>
+        <div class="product" data-type="di-bo" data-color="den">Giày Đi Bộ - Màu Đen</div>
+        <div class="product" data-type="di-bo" data-color="trang">Giày Đi Bộ - Màu Trắng</div>
+        <div class="product" data-type="cau-long" data-color="do">Giày Cầu Lông - Màu Đỏ</div>
+        <div class="product" data-type="cau-long" data-color="xanh">Giày Cầu Lông - Màu Xanh</div>
+    </div>
+
+    <script>
+        // Áp dụng bộ lọc ngay khi có thay đổi trong checkbox hoặc radio
+        document.querySelectorAll('input[name="shoe-type"], input[name="shoe-color"]').forEach(input => {
+            input.addEventListener('change', applyFilters);
+        });
+
+        function applyFilters() {
+            // Lấy giá trị của các checkbox được chọn cho loại giày
+            const shoeTypes = Array.from(document.querySelectorAll('input[name="shoe-type"]:checked')).map(el => el.value);
+            
+            // Lấy giá trị của radio được chọn cho màu giày
+            const shoeColor = document.querySelector('input[name="shoe-color"]:checked')?.value || '';
+
+            // Kiểm tra nếu "Tất Cả Loại Giày" được chọn
+            const allTypesSelected = shoeTypes.includes('tat-ca');
+
+            // Lọc và hiển thị các sản phẩm
+            const products = document.querySelectorAll('.product');
+            products.forEach(product => {
+                const productType = product.getAttribute('data-type'); // Lấy loại giày của sản phẩm
+                const productColor = product.getAttribute('data-color'); // Lấy màu giày của sản phẩm
+
+                // Kiểm tra xem sản phẩm có phù hợp với bộ lọc không
+                if ((allTypesSelected || shoeTypes.includes(productType) || shoeTypes.length === 0) &&
+                    (shoeColor === productColor || shoeColor === '')) {
+                    product.style.display = 'block'; // Hiển thị sản phẩm
+                } else {
+                    product.style.display = 'none'; // Ẩn sản phẩm
+                }
+            });
+        }
+
+        // Tự động áp dụng bộ lọc khi tải trang
+        window.onload = applyFilters;
+    </script>
+</body>
+</html>

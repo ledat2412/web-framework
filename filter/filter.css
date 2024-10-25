@@ -1,0 +1,41 @@
+ /* Cơ bản */
+ body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.filter-menu {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-menu button {
+    margin: 0 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+}
+
+.filter-menu button:hover {
+    background-color: #ddd;
+}
+
+.filter-menu button.active {
+    background-color: #aaa;
+    color: white;
+}
+
+.product-list .product {
+    display: none; /* Ẩn tất cả sản phẩm mặc định */
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-list .product.show {
+    display: block; /* Hiển thị khi có lớp "show" */
+}
