@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển Hướng Với Select</title>
+</head>
+<body>
+
+    <form method="get" action="" onchange="this.submit()">
+        <label for="page-select">Chọn Trang Đích:</label>
+        <select id="page-select" name="page">
+            <option value="">Chọn trang...</option>
+            <option value="trang1.html">Trang 1</option>
+            <option value="trang2.html">Trang 2</option>
+            <option value="trang3.html">Trang 3</option>
+        </select>
+    </form>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Search</title>
+    <style>
+        .search-container {
+            position: relative;
+            width: 300px;
+        }
+        .search {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .suggestions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            background: #fff;
+            max-height: 150px;
+            overflow-y: auto;
+            display: none; 
+            z-index: 10;
+        }
+        .suggestions li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .suggestions li:hover {
+            background: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" class="search" placeholder="Search your favorite item" oninput="showSuggestions(this.value)">
+        <ul class="suggestions" id="suggestions">
+            <a href="trang1.html"></a><li>Giày thể thao Li-Ning</li>
+            <a href="trang2.html"></a><li>Áo thun thể thao</li>
+            <a href="trang3.html"></a><li>Quần shorts tập gym</li>
+            <a href="trang4.html"></a><li>Áo khoác gió</li>
+            <a href="trang5.html"></a><li>Balo thể thao</li>
+            <a href="trang6.html"></a><li>Tất thể thao Li-Ning</li>
+        </ul>
+    </div>
+
+    <script>
+        function showSuggestions(value) {
+            const suggestions = document.getElementById('suggestions');
+            if (value) {
+                suggestions.style.display = 'block'; // Hiện danh sách gợi ý khi có dữ liệu nhập vào
+            } else {
+                suggestions.style.display = 'none'; // Ẩn nếu không có dữ liệu
+            }
+        }
+
+        // Ẩn danh sách khi click ra ngoài
+        document.addEventListener('click', function(event) {
+            const suggestions = document.getElementById('suggestions');
+            if (!event.target.closest('.search-container')) {
+                suggestions.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

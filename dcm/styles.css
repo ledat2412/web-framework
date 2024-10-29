@@ -1,0 +1,483 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.modal-toggle {
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.modal {
+    opacity: 0;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    animation: fadeOut 0.5s forwards;
+}
+
+
+.modal-toggle:checked + .modal {
+    display: flex;
+    animation: fadeIn 0.5s forwards;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.close-button {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    cursor: pointer;
+    text-align: center;
+} */
+
+
+/* ------------------ */
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.modal-toggle {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.modal {
+    opacity: 0;
+    pointer-events: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; 
+}
+
+
+.modal-toggle:checked + .modal {
+    opacity: 1;
+    pointer-events: auto;
+    animation: fadeIn 0.5s forwards; 
+}
+
+
+.modal:not(:checked) {
+    animation: fadeOut 0.5s forwards; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.close-button {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    cursor: pointer;
+    text-align: center;
+} */
+
+
+/* ---------------- */
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.modal-toggle {
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+.modal {
+    opacity: 0;
+    pointer-events: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; 
+}
+
+
+.modal-toggle:checked + .modal {
+    opacity: 1;
+    pointer-events: auto; 
+    animation: fadeIn 0.5s forwards; 
+}
+
+
+.modal:not(:checked) {
+    animation: fadeOut 0.5s forwards; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: opacity 0.5s ease;
+}
+
+.close-button {
+    display: block;
+    margin-top: 15px;
+    color: #007bff;
+    cursor: pointer;
+    text-align: center;
+} */
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Ẩn checkbox */
+.modal-toggle {
+    display: none;
+}
+
+/* Định nghĩa keyframe cho fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Định nghĩa keyframe cho fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Mặc định modal sẽ không hiển thị */
+.modal {
+    opacity: 0;
+    pointer-events: none; /* Ngăn chặn tương tác khi modal không hiển thị */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease; /* Hiệu ứng mờ dần */
+}
+
+/* Khi checkbox được chọn, hiển thị modal với animation fadeIn */
+.modal-toggle:checked + .modal {
+    opacity: 1;
+    pointer-events: auto; /* Kích hoạt tương tác khi modal hiển thị */
+    animation: fadeIn 0.5s forwards; /* Áp dụng fadeIn khi mở */
+}
+
+/* Khi checkbox không còn được chọn, áp dụng fadeOut */
+.modal:not(:checked) {
+    animation: fadeOut 0.5s forwards; /* Áp dụng fadeOut khi đóng */
+}
+
+/* Định dạng cho phần nền modal */
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Màu nền tối với độ mờ */
+    /* cursor: pointer; */
+}
+
+/* Nội dung modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Nút Đóng */
+.close-button {
+    display: block;
+    margin-top: 15px;
+    color: white; /* Màu chữ */
+    background-color: #007bff; /* Màu nền */
+    padding: 10px;
+    width: 100px; /* Độ rộng của nút */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi di chuột */
+}
+
+/* Thay đổi màu nền khi di chuột */
+.close-button:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột qua */
+}
+
+
+/* Background overlay for the modal */
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4a90e2, #a3a3e2); /* Gradient background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Modal content styling */
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+}
+
+/* Form input styling */
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: none;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background: linear-gradient(90deg, #4a90e2, #a3a3e2); /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #3a80d2, #9292d2);
+}
+
+/* Close button styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+}
+
+/* Style for underlined input fields */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px 0;         /* Add padding on top and bottom */
+    margin-top: 5px;
+    border: none;             /* Remove all borders */
+    border-bottom: 2px solid #ccc; /* Add bottom border only */
+    outline: none;            /* Remove the blue outline on focus */
+    font-size: 16px;
+    background: none;         /* No background */
+    resize: none;             /* Prevent textarea resizing */
+}
+
+/* Change color on focus */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+    border-bottom: 2px solid #4a90e2; /* Change underline color on focus */
+}

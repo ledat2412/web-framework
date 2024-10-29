@@ -1,42 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test.css">
-    <script src="test.js"></script>
-    <title>Document</title>
+    <title>Tìm kiếm sản phẩm</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- <custom-header></custom-header> -->
-    <!-- <div class="search-container">
-        <h1>Search</h1>
-        <input type="text" class="search-bar" list="suggestions" placeholder="Search for products..." id="fav-food">
-    
-        <datalist id="suggestions">
-            <option value="Giày thể thao Li-Ning">
-            <option value="Áo thun thể thao">
-            <option value="Quần shorts tập gym">
-            <option value="Áo khoác gió">
-            <option value="Balo thể thao">
-            <option value="Tất thể thao Li-Ning">
-        </datalist>
-    
-        <input type="submit" value="Submit">
-    </div> -->
     <div class="search-container">
-        <h1>Search</h1>
-        <input type="text" class="search-bar" placeholder="Search for products..." id="fav-food" oninput="filterSuggestions()">
-    
-        <ul class="suggestions" id="suggestions">
-            <li>Giày thể thao Li-Ning</li>
-            <li>Áo thun thể thao</li>
-            <li>Balo thể thao</li>
-            <li>Tất thể thao Li-Ning</li>
-            <li>an ba to com</li>
-        </ul>
-    
-        <input type="submit" value="Submit">
+        <h1>Tìm kiếm</h1>
+        <form action="" method="GET" onsubmit="return navigateToPage();">
+            <input type="text" class="search-bar" list="suggestions" placeholder="Tìm kiếm sản phẩm..." id="fav-food" name="query" onchange="updateAction()">
+            <datalist id="suggestions">
+                <option value="Giày thể thao Li-Ning" data-url="shoes.html"></option>
+                <option value="Áo thun thể thao" data-url="t-shirt.html"></option>
+                <option value="Quần shorts tập gym" data-url="shorts.html"></option>
+                <option value="Áo khoác gió" data-url="jacket.html"></option>
+                <option value="Balo thể thao" data-url="backpack.html"></option>
+                <option value="Tất thể thao Li-Ning" data-url="socks.html"></option>
+            </datalist>
+            <button type="submit">Tìm kiếm</button>
+        </form>
     </div>
+
+    <script>
+        function navigateToPage() {
+            const input = document.getElementById("fav-food");
+            const selectedOption = document.querySelector(`option[value="${input.value}"]`);
+            if (selectedOption) {
+                window.location.href = selectedOption.dataset.url; // Chuyển hướng đến trang tương ứng
+            }
+            return false; // Ngăn chặn hành vi gửi form mặc định
+        }
+    </script>
 </body>
 </html>
